@@ -1,0 +1,64 @@
+--CREATE DATABASE WK;
+--USE WK;
+
+CREATE TABLE Clientes
+(
+	Codigo INTEGER UNSIGNED NOT NULL AUTO_INCREMENT, 
+	Nome VARCHAR(40) NULL, 
+	Cidade VARCHAR(20) NULL, 
+	UF CHAR(2) NULL, 
+	PRIMARY KEY(Codigo)
+);
+
+CREATE TABLE Produtos
+(
+	Codigo INTEGER UNSIGNED NOT NULL AUTO_INCREMENT, 
+	Descricao VARCHAR(40) NULL, 
+	PrecoVenda FLOAT(8,2) NULL, 
+	PRIMARY KEY(Codigo)
+);
+
+-- Inserindo clientes um por um
+
+INSERT INTO Clientes VALUES (01, 'João Carlos', 'Belo Horizonte', 'MG');
+INSERT INTO Clientes VALUES (02, 'Alessandra Márcia', 'Fortaleza', 'CE');
+INSERT INTO Clientes VALUES (03, 'Thaís Caroline', 'Maceió', 'AL');
+INSERT INTO Clientes VALUES (04, 'Isabella Sandra', 'Natal', 'RN');
+INSERT INTO Clientes VALUES (05, 'João Pedro', 'Ouro Branco', 'MG');
+INSERT INTO Clientes VALUES (06, 'Pedro Augusto', 'Belo Horizonte', 'MG');
+INSERT INTO Clientes VALUES (07, 'José Carlos', 'São Paulo', 'SP');
+INSERT INTO Clientes VALUES (08, 'Maurício Lima', 'Belo Horizonte', 'MG');
+INSERT INTO Clientes VALUES (09, 'Jeniifer Carla', 'Belo Horizonte', 'MG');
+INSERT INTO Clientes VALUES (10, 'Maria Joaquina', 'Belo Horizonte', 'MG');
+INSERT INTO Clientes VALUES (11, 'Efranio Costa', 'Belo Horizonte', 'MG');
+INSERT INTO Clientes VALUES (12, 'Maria Auxiliadora', 'Belo Horizonte', 'MG');
+INSERT INTO Clientes VALUES (13, 'João Amorim', 'Belo Horizonte', 'MG');
+INSERT INTO Clientes VALUES (14, 'Igor Castro', 'Belo Horizonte', 'MG');
+INSERT INTO Clientes VALUES (15, 'Rebecca Gusmão', 'Belo Horizonte', 'MG');
+INSERT INTO Clientes VALUES (16, 'Celso Junior', 'Belo Horizonte', 'MG');
+INSERT INTO Clientes VALUES (17, 'Ruan Rodrigues', 'Belo Horizonte', 'MG');
+INSERT INTO Clientes VALUES (18, 'Paulo César', 'Belo Horizonte', 'MG');
+INSERT INTO Clientes VALUES (19, 'Ademar Nascimento', 'Belo Horizonte', 'MG');
+INSERT INTO Clientes VALUES (20, 'Pedro Araujo', 'Belo Horizonte', 'MG');
+
+
+-- Inserindo produtos de forma rápida e aleatoria
+
+INSERT INTO Produtos (Codigo, Descricao, PrecoVenda)
+SELECT
+    ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS Codigo,
+    CONCAT('Produto ', ROW_NUMBER() OVER (ORDER BY (SELECT NULL))) AS Descricao,
+    ROUND(RAND() * 1000, 2) AS Preco
+FROM
+    information_schema.tables t1,
+    information_schema.tables t2    
+LIMIT 20 ;
+ 
+-- Checando se scripts foram corretamente executados
+
+SELECT * FROM PRODUTOS ;
+SELECT * FROM CLIENTES ;
+
+
+
+

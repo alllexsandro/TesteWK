@@ -1,0 +1,37 @@
+object FRMTeste: TFRMTeste
+  Left = 0
+  Top = 0
+  Caption = 'Teste WK'
+  ClientHeight = 433
+  ClientWidth = 603
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = 48
+    Top = 192
+    Width = 513
+    Height = 153
+    DataSource = DTMWK.DTSClientes
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 160
+    Top = 368
+    Width = 240
+    Height = 25
+    DataSource = DTMWK.DTSClientes
+    TabOrder = 1
+  end
+end

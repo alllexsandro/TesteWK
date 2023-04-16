@@ -1,0 +1,138 @@
+object FRMTeste: TFRMTeste
+  Left = 0
+  Top = 0
+  Caption = 'Teste WK'
+  ClientHeight = 433
+  ClientWidth = 743
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 57
+    Top = 27
+    Width = 33
+    Height = 13
+    Caption = 'Cliente'
+  end
+  object Label2: TLabel
+    Left = 52
+    Top = 123
+    Width = 38
+    Height = 13
+    Caption = 'Produto'
+  end
+  object Label3: TLabel
+    Left = 456
+    Top = 123
+    Width = 56
+    Height = 13
+    Caption = 'Quantidade'
+  end
+  object Label4: TLabel
+    Left = 594
+    Top = 123
+    Width = 24
+    Height = 13
+    Caption = 'Valor'
+  end
+  object DBGClientes: TDBGrid
+    Left = 151
+    Top = 58
+    Width = 562
+    Height = 39
+    DataSource = DTMWK.DTSClientes
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Visible = False
+    OnCellClick = DBGClientesCellClick
+    OnDblClick = DBGClientesDblClick
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 160
+    Top = 368
+    Width = 240
+    Height = 25
+    DataSource = DTMWK.DTSClientes
+    TabOrder = 1
+  end
+  object EDTCodigoCliente: TEdit
+    Left = 96
+    Top = 29
+    Width = 49
+    Height = 21
+    TabOrder = 2
+  end
+  object EDTNomeCliente: TEdit
+    Left = 151
+    Top = 29
+    Width = 249
+    Height = 21
+    Color = clBtnFace
+    ReadOnly = True
+    TabOrder = 3
+  end
+  object BTNLocalizaCliente: TButton
+    Left = 406
+    Top = 27
+    Width = 27
+    Height = 25
+    Hint = 'Selecionar Cliente'
+    Caption = '...'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 4
+    OnClick = BTNLocalizaClienteClick
+  end
+  object Edit1: TEdit
+    Left = 96
+    Top = 125
+    Width = 49
+    Height = 21
+    TabOrder = 5
+  end
+  object Edit2: TEdit
+    Left = 151
+    Top = 125
+    Width = 249
+    Height = 21
+    Color = clBtnFace
+    ReadOnly = True
+    TabOrder = 6
+  end
+  object Button1: TButton
+    Left = 406
+    Top = 123
+    Width = 27
+    Height = 25
+    Hint = 'Selecionar Cliente'
+    Caption = '...'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 7
+    OnClick = BTNLocalizaClienteClick
+  end
+  object Edit3: TEdit
+    Left = 518
+    Top = 125
+    Width = 49
+    Height = 21
+    TabOrder = 8
+  end
+  object Edit4: TEdit
+    Left = 624
+    Top = 125
+    Width = 89
+    Height = 21
+    TabOrder = 9
+  end
+end

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/04/16 12:54:31.000.683,=C:\Users\allle\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/16 12:54:43.000.682,=C:\Users\allle\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/04/16 13:31:40.000.208,C:\Users\allle\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.dfm=C:\Wk2\Unit2.dfm</Transaction>
+    <Transaction>2023/04/16 13:31:40.000.208,C:\Users\allle\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas=C:\Wk2\Unit2.pas</Transaction>
+    <Transaction>2023/04/16 13:32:05.000.361,C:\Users\allle\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm=C:\Wk2\uWKTeste.dfm</Transaction>
+    <Transaction>2023/04/16 13:32:05.000.361,C:\Users\allle\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=C:\Wk2\uWKTeste.pas</Transaction>
+    <Transaction>2023/04/16 13:32:12.000.289,C:\Users\allle\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=C:\Wk2\WKTeste.dproj</Transaction>
+    <Transaction>2023/04/16 13:32:37.000.202,C:\Wk2\Unit2.dfm=C:\Wk2\uWKDataModule.dfm</Transaction>
+    <Transaction>2023/04/16 13:32:37.000.202,C:\Wk2\Unit2.pas=C:\Wk2\uWKDataModule.pas</Transaction>
+  </Transactions>
+</BorlandProject>

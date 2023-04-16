@@ -1,0 +1,61 @@
+unit uWKTeste;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids, uWKDataModule,
+  Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.StdCtrls;
+
+
+type
+  TFRMTeste = class(TForm)
+    DBGClientes: TDBGrid;
+    DBNavigator1: TDBNavigator;
+    Label1: TLabel;
+    EDTCodigoCliente: TEdit;
+    EDTNomeCliente: TEdit;
+    BTNLocalizaCliente: TButton;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Button1: TButton;
+    Label2: TLabel;
+    Label3: TLabel;
+    Edit3: TEdit;
+    Label4: TLabel;
+    Edit4: TEdit;
+    procedure BTNLocalizaClienteClick(Sender: TObject);
+    procedure DBGClientesCellClick(Column: TColumn);
+    procedure DBGClientesDblClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FRMTeste: TFRMTeste;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFRMTeste.BTNLocalizaClienteClick(Sender: TObject);
+begin
+  DBGClientes.Height  := 270;
+  DBGClientes.Visible := true;
+  DBGClientes.SetFocus;
+end;
+
+procedure TFRMTeste.DBGClientesCellClick(Column: TColumn);
+begin
+  EDTCodigoCliente.text := DTMWK.TABClientesCODIGO.AsString;
+  EDTNomeCliente.text   := DTMWK.TABClientesNOME.AsString;
+end;
+
+procedure TFRMTeste.DBGClientesDblClick(Sender: TObject);
+begin
+  DBGClientes.Visible := false;
+end;
+
+end.

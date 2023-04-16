@@ -1,0 +1,57 @@
+object DTMWK: TDTMWK
+  OldCreateOrder = False
+  Height = 322
+  Width = 423
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=C:\Wk2\Dados\WK.fdb'
+      'User_Name=sysdba'
+      'DriverID=FB')
+    Connected = True
+    Left = 56
+    Top = 24
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 56
+    Top = 168
+  end
+  object FDPhysFBDriverLink1: TFDPhysFBDriverLink
+    VendorLib = 'C:\Program Files (x86)\Firebird\Firebird_2_5\bin\fbclient.dll'
+    Left = 56
+    Top = 96
+  end
+  object DataSource1: TDataSource
+    Left = 168
+    Top = 24
+  end
+  object FDTClientes: TFDTable
+    IndexFieldNames = 'CODIGO'
+    Connection = FDConnection1
+    TableName = 'CLIENTES'
+    Left = 160
+    Top = 96
+    object FDTClientesCODIGO: TIntegerField
+      FieldName = 'CODIGO'
+      Origin = 'CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDTClientesNOME: TStringField
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Size = 40
+    end
+    object FDTClientesCIDADE: TStringField
+      FieldName = 'CIDADE'
+      Origin = 'CIDADE'
+      Size = 30
+    end
+    object FDTClientesUF: TStringField
+      FieldName = 'UF'
+      Origin = 'UF'
+      FixedChar = True
+      Size = 2
+    end
+  end
+end
